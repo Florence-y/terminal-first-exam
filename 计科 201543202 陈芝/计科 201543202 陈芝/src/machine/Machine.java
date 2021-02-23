@@ -6,16 +6,17 @@ public class Machine //主类
 {
     public static void main(String[] args)//main方法
     {
-    System.out.println("欢迎光临饮料自动售货机！请选择您需要的服务选项");
+        //这里需要while
+            System.out.println("欢迎光临饮料自动售货机！请选择您需要的服务选项");
 
-    Menu choice=new Menu(); //创建menu对象 来使用菜单
-    choice.myMenu();//调用
-    Scanner reader=new Scanner(System.in);   
-    int num;//序号
-    num=reader.nextInt();  //输入num序号 字符串转int
+            Menu choice = new Menu(); //创建menu对象 来使用菜单
+            choice.myMenu();//调用
+            Scanner reader = new Scanner(System.in);
+            int num;//序号
+            num = reader.nextInt();  //输入num序号 字符串转int
 
-    Display dis=new Display(); //创建diaplay对象 来显示选择序号后显示的内容
-    dis.myDisplay(num);
+            Display dis = new Display(); //创建diaplay对象 来显示选择序号后显示的内容
+            dis.myDisplay(num);
     }
 }
 
@@ -209,7 +210,7 @@ class Consume2 extends Consumer
                   buy4.amount=buy4.amount-1;
                   buy4.advertisingLanguage();
         	  }
-            
+
             }
           if(consumerWant==2)
             {
@@ -228,7 +229,7 @@ class Consume2 extends Consumer
             {
         	  if(consumerMoney<5.0*0.7)
         		  System.out.println("您的余额不足，无法购买");
-        	  else 
+        	  else
         	  {
                   consumerMoney=consumerMoney-5.0*0.7;
                   System.out.println("成功购买可乐，您的余额为："+consumerMoney);
@@ -236,7 +237,7 @@ class Consume2 extends Consumer
                   buy6.amount=buy6.amount-1;
                   buy6.advertisingLanguage();
         	  }
-        	  
+
             }
         }
     else if(consumerIdentity.equals("No" ))
